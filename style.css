@@ -1,0 +1,94 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* NAVIGATION BAR */
+    /* general */
+    nav {
+        display: flex;
+        padding: 40px;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: rgba(25, 28, 31, 0.5);
+        transition: color .2s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        color: rgba(25, 28, 31, 1);
+    }
+
+    /* left */
+    nav .left ul li:nth-child(2) a {
+        color: rgba(25, 28, 31, 1);
+    }
+
+
+    nav .left {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        flex-grow: 1;
+    }
+
+    /* right side */
+    nav .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 50px;
+        flex-grow: 1;
+    }
+
+    nav .right ul li:nth-last-of-type(2) {
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: rgb(237, 237, 237);
+        transition: color .2s ease-in-out;
+    }
+
+    nav .right ul li:nth-last-of-type(2) a {
+        color: rgba(25, 28, 31, 1);
+    }
+
+    nav .right ul li:nth-last-of-type(2):hover {
+        background-color: rgba(25, 28, 31, 0.16);
+    }
+
+    nav .right ul li:last-of-type {
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: rgba(25, 28, 31, 1);
+    }
+
+    nav .right ul li:last-of-type a {
+        color: #ffffff;
+    }
+
+    nav .right ul li:last-of-type:hover {
+        background-color: rgba(25, 28, 31, 0.84);
+    }
