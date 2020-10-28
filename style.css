@@ -20,30 +20,32 @@ body {
         font-weight: 500;
     }
 
-    nav ul {
+    nav > div > ul {
         display: flex;
     }
 
-    nav ul li {
+    nav div > ul > li {
         list-style-type: none;
         margin: 0 15px;
         display: flex;
         align-items: center;
+        position: relative;
     }
 
-    nav ul li a {
+    nav div > ul li a {
+        /* line-height: 50px; */
         text-decoration: none;
         text-transform: capitalize;
         color: rgba(25, 28, 31, 0.5);
         transition: color .2s ease-in-out;
     }
 
-    nav ul li a:hover {
+    nav div > ul li a:hover {
         color: rgba(25, 28, 31, 1);
     }
 
     /* left */
-    nav .left ul li:nth-child(2) a {
+    nav .left > ul li:nth-child(2) a {
         color: rgba(25, 28, 31, 1);
     }
 
@@ -64,31 +66,79 @@ body {
         flex-grow: 1;
     }
 
-    nav .right ul li:nth-last-of-type(2) {
+    nav .right > ul > li:nth-last-of-type(2) {
         padding: 15px 20px;
         border-radius: 10px;
         background-color: rgb(237, 237, 237);
         transition: color .2s ease-in-out;
     }
 
-    nav .right ul li:nth-last-of-type(2) a {
+    nav .right > ul > li:nth-last-of-type(2) a {
         color: rgba(25, 28, 31, 1);
     }
 
-    nav .right ul li:nth-last-of-type(2):hover {
+    nav .right > ul > li:nth-last-of-type(2):hover {
         background-color: rgba(25, 28, 31, 0.16);
     }
 
-    nav .right ul li:last-of-type {
+    nav .right > ul > li:last-of-type {
         padding: 15px 20px;
         border-radius: 10px;
         background-color: rgba(25, 28, 31, 1);
     }
 
-    nav .right ul li:last-of-type a {
+    nav .right > ul > li:last-of-type a {
         color: #ffffff;
     }
 
-    nav .right ul li:last-of-type:hover {
+    nav .right > ul > li:last-of-type:hover {
         background-color: rgba(25, 28, 31, 0.84);
+    }
+
+    nav .right ul li div {
+        position: absolute;
+        display: flex;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+        visibility: hidden;
+    }
+
+    nav .right ul li div.active {
+        visibility: visible;
+    }
+
+    nav .right ul li div ul {
+        flex-grow: 1;
+        margin: 10px;
+        text-transform: uppercase;
+    }
+
+    nav .right ul li div ul li {
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .dropdown {
+        white-space: nowrap;
+    }
+
+    .funzionalità .dropdown {
+        top: 70px;
+        left: -500px;
+        width: 1200px;
+    }
+
+    .abbonamenti .dropdown {
+        top: 70px;
+        left: -20px;
+    }
+
+    .chi-siamo .dropdown {
+        top: 70px;
+        left: -20px;
+    }
+
+    .aiuto .dropdown {
+        top: 70px;
+        left: -20px;
     }
